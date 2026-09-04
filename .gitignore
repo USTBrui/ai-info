@@ -1,0 +1,23 @@
+# AI 资讯每日看板
+# Author: wr
+
+# 本地密钥文件（DeepSeek API Key 放这里），绝不提交到网上
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 编辑器
+.vscode/
+.idea/
+
+# 本地 AI 助手工作目录（含个人笔记，不上传）
+.codebuddy/
+
+# 系统垃圾文件
+Thumbs.db
+Desktop.ini

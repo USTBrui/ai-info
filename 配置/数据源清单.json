@@ -1,0 +1,241 @@
+{
+  "_说明": [
+    "这是整个程序的「情报源总清单」。想加新源，照着下面抄一段改一改就行，不用动代码。",
+    "三种类型怎么选：",
+    "  rss      —— 绝大多数博客、论坛、新闻站都有，网址通常以 .rss / .xml / /feed 结尾。首选这个。",
+    "  atom     —— 专给 GitHub 用的（ releases.atom / commits.atom ），用来盯开源工具的更新日志。",
+    "  html_diff—— 给「没有 RSS」的厂商官网用的。程序会定期去看那个页面，把新出现的条目挑出来。",
+    "关键字段：",
+    "  id       —— 唯一英文代号，不能重名。",
+    "  分类     —— 只能填这几种之一：行业新闻 / 论坛热议 / 厂商动态 / 更新日志 / 开源项目",
+    "  厂商     —— 没有就填 null。填了会出现在页面的「厂商动态」分组里。",
+    "  启用     —— false 表示暂时不抓，但配置留着。",
+    "  选择器   —— 只有 html_diff 类型才需要，是字符串数组，程序会从左到右依次尝试，前一个抓不到就试下一个。",
+    "注意：这是 JSON 文件，不能写注释，字符串必须用双引号，最后一项后面不能有逗号。"
+  ],
+
+  "设置": {
+    "时区": "Asia/Shanghai",
+    "抓取超时秒": 20,
+    "重试次数": 2,
+    "并发线程": 8,
+    "强制IPv4优先": true,
+    "单条摘要保留字数": 200,
+    "AI处理条数上限": 120,
+    "AI每批条数": 10,
+    "归档保留天数": 30,
+    "同域名请求间隔秒": 1.5
+  },
+
+  "源列表": [
+    {
+      "id": "locdd_latest",
+      "名称": "大佬说 · 最新话题",
+      "类型": "rss",
+      "网址": "https://www.locdd.com/latest.rss",
+      "分类": "论坛热议",
+      "厂商": null,
+      "启用": true,
+      "选择器": [],
+      "备注": "已实测可用。Discourse 论坛，正文里带「N 个帖子 - M 位参与者」，可解析出热度。"
+    },
+    {
+      "id": "locdd_top",
+      "名称": "大佬说 · 热门话题",
+      "类型": "rss",
+      "网址": "https://www.locdd.com/top.rss",
+      "分类": "论坛热议",
+      "厂商": null,
+      "启用": true,
+      "选择器": [],
+      "备注": "同上，按热度排序的精选话题。"
+    },
+    {
+      "id": "linuxdo_latest",
+      "名称": "LinuxDo · 最新话题",
+      "类型": "rss",
+      "网址": "https://linux.do/latest.rss",
+      "分类": "论坛热议",
+      "厂商": null,
+      "启用": true,
+      "选择器": [],
+      "备注": "本机网络可能连不上这个站（探测时会超时），但 GitHub Actions 的服务器在国外，通常能抓到。本地抓不到属正常，不影响使用。"
+    },
+    {
+      "id": "linuxdo_top",
+      "名称": "LinuxDo · 热门话题",
+      "类型": "rss",
+      "网址": "https://linux.do/top.rss",
+      "分类": "论坛热议",
+      "厂商": null,
+      "启用": true,
+      "选择器": [],
+      "备注": "同上。"
+    },
+    {
+      "id": "jiqizhixin",
+      "名称": "机器之心",
+      "类型": "rss",
+      "网址": "https://www.jiqizhixin.com/rss",
+      "分类": "行业新闻",
+      "厂商": null,
+      "启用": false,
+      "选择器": [],
+      "备注": "已失效：这个地址现在返回的是普通网页而不是 RSS，所以先停用。哪天它恢复了，把「启用」改回 true 即可。"
+    },
+    {
+      "id": "qbitai",
+      "名称": "量子位",
+      "类型": "rss",
+      "网址": "https://www.qbitai.com/feed",
+      "分类": "行业新闻",
+      "厂商": null,
+      "启用": true,
+      "选择器": [],
+      "备注": "国内头部 AI 媒体。"
+    },
+    {
+      "id": "sspai",
+      "名称": "少数派",
+      "类型": "rss",
+      "网址": "https://sspai.com/feed",
+      "分类": "行业新闻",
+      "厂商": null,
+      "启用": true,
+      "选择器": [],
+      "备注": "效率工具与 AI 应用实践。"
+    },
+    {
+      "id": "hn_ai",
+      "名称": "Hacker News · AI 关键词",
+      "类型": "rss",
+      "网址": "https://hnrss.org/newest?q=AI+OR+LLM+OR+GPT+OR+Claude+OR+Gemini&count=30",
+      "分类": "行业新闻",
+      "厂商": null,
+      "启用": true,
+      "选择器": [],
+      "备注": "英文圈一手消息，速度快。"
+    },
+    {
+      "id": "v2ex_ai",
+      "名称": "V2EX · 最新",
+      "类型": "rss",
+      "网址": "https://www.v2ex.com/index.xml",
+      "分类": "行业新闻",
+      "厂商": null,
+      "启用": true,
+      "选择器": [],
+      "备注": "综合技术社区，偶尔有 AI 相关好帖。"
+    },
+    {
+      "id": "solidot",
+      "名称": "Solidot",
+      "类型": "rss",
+      "网址": "https://www.solidot.org/index.rss",
+      "分类": "行业新闻",
+      "厂商": null,
+      "启用": true,
+      "选择器": [],
+      "备注": "科技新闻，含大量 AI 与大厂动态。"
+    },
+    {
+      "id": "infoq_cn",
+      "名称": "InfoQ 中文站",
+      "类型": "rss",
+      "网址": "https://www.infoq.cn/feed",
+      "分类": "行业新闻",
+      "厂商": null,
+      "启用": true,
+      "选择器": [],
+      "备注": "技术媒体，偏架构与工程实践。"
+    },
+    {
+      "id": "gh_claude_code",
+      "名称": "Claude Code · 版本发布",
+      "类型": "atom",
+      "网址": "https://github.com/anthropics/claude-code/releases.atom",
+      "分类": "开源项目",
+      "厂商": "Claude Code",
+      "启用": true,
+      "选择器": [],
+      "备注": "GitHub 原生 Atom，最稳的更新日志源。"
+    },
+    {
+      "id": "deepseek_changelog",
+      "名称": "DeepSeek · 更新日志",
+      "类型": "html_diff",
+      "网址": "https://api-docs.deepseek.com/zh-cn/updates",
+      "分类": "更新日志",
+      "厂商": "DeepSeek",
+      "启用": true,
+      "选择器": ["article h3", "main h3"],
+      "备注": "已实测可用。每次有新模型发布或更新，这里会多出一条。"
+    },
+    {
+      "id": "zhipu_releases",
+      "名称": "智谱 · 新品发布",
+      "类型": "html_diff",
+      "网址": "https://docs.bigmodel.cn/cn/update/new-releases",
+      "分类": "更新日志",
+      "厂商": "智谱",
+      "启用": true,
+      "选择器": ["[class*=update-]", "main h2"],
+      "备注": "已实测可用，能抓到 GLM 系列的发布动态。"
+    },
+    {
+      "id": "kimi_changelog",
+      "名称": "Kimi · 平台变更",
+      "类型": "html_diff",
+      "网址": "https://platform.kimi.ai/docs/platform-changelog",
+      "分类": "更新日志",
+      "厂商": "Kimi",
+      "启用": true,
+      "选择器": ["main h2"],
+      "备注": "已实测可用。页面按日期分节，新日期出现就是有更新。"
+    },
+    {
+      "id": "aliyun_models",
+      "名称": "阿里百炼 · 模型列表",
+      "类型": "html_diff",
+      "网址": "https://help.aliyun.com/zh/model-studio/models",
+      "分类": "厂商动态",
+      "厂商": "通义千问",
+      "启用": true,
+      "选择器": ["table tbody tr", ".markdown-body h2"],
+      "备注": "已实测可用。模型清单有变动（上新、下架）时这里会提醒你。"
+    },
+    {
+      "id": "minimax_changelog",
+      "名称": "MiniMax · 更新日志",
+      "类型": "html_diff",
+      "网址": "https://platform.minimaxi.com/document/Changelog",
+      "分类": "更新日志",
+      "厂商": "MiniMax",
+      "启用": false,
+      "选择器": [],
+      "备注": "已实测：这个页面靠 JavaScript 现渲染，静态抓取只能拿到空壳，先停用。"
+    },
+    {
+      "id": "volcengine_update",
+      "名称": "火山方舟 · 更新日志",
+      "类型": "html_diff",
+      "网址": "https://www.volcengine.com/docs/82379/1544104",
+      "分类": "更新日志",
+      "厂商": "火山引擎",
+      "启用": false,
+      "选择器": [],
+      "备注": "已实测：同样是 JavaScript 渲染的页面，先停用。火山引擎的动态可以关注「量子位」等行业新闻源。"
+    },
+    {
+      "id": "gh_cursor",
+      "名称": "Cursor 相关 · 社区镜像更新",
+      "类型": "atom",
+      "网址": "https://github.com/getcursor/cursor/releases.atom",
+      "分类": "开源项目",
+      "厂商": "Cursor",
+      "启用": false,
+      "选择器": [],
+      "备注": "该仓库可能不存在或为空，已默认关闭。你可以先跑一次「探测数据源.bat」确认哪些能抓。"
+    }
+  ]
+}

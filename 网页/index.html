@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--
+  AI 日报 · 每日看板
+  Author: wr
+
+  用法：直接双击这个文件就能看，不需要任何服务器。
+  数据来自同目录 data 文件夹里由 Python 脚本生成的 .js 文件。
+-->
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 日报 · 每日看板</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 背景光晕，纯装饰 -->
+<div class="bg-aurora" aria-hidden="true">
+  <span class="glow glow-1"></span>
+  <span class="glow glow-2"></span>
+  <span class="glow glow-3"></span>
+</div>
+
+<!-- ============================ 顶部导航 ============================ -->
+<header class="topbar" id="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">AI</span>
+      <div class="brand-text">
+        <strong>AI 日报</strong>
+        <span class="brand-sub" id="brand-sub">正在载入…</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+      </svg>
+      <input type="search" id="search" placeholder="搜索标题、摘要、厂商…（按 / 快速聚焦）" autocomplete="off">
+      <kbd class="search-kbd">/</kbd>
+    </div>
+
+    <div class="topbar-actions">
+      <button class="icon-btn" id="btn-starred" title="只看收藏的内容" aria-label="只看收藏">
+        <span class="star-glyph">★</span>
+        <span class="badge" id="starred-count" hidden>0</span>
+      </button>
+      <button class="icon-btn" id="btn-theme" title="切换深色 / 浅色" aria-label="切换主题">
+        <span id="theme-glyph">☾</span>
+      </button>
+      <button class="icon-btn" id="btn-help" title="使用说明" aria-label="使用说明">?</button>
+    </div>
+  </div>
+</header>
+
+<main class="layout">
+
+  <!-- ======================== 左：主内容区 ======================== -->
+  <div class="col-main">
+
+    <!-- AI 每日简报 -->
+    <section class="briefing" id="briefing" aria-label="今日简报">
+      <div class="briefing-bar"></div>
+      <div class="briefing-body">
+        <div class="briefing-head">
+          <span class="chip chip-ai" id="mode-chip">规则模式</span>
+          <h1 class="briefing-title">今日简报</h1>
+        </div>
+        <p class="briefing-text" id="briefing-text">正在生成今日简报…</p>
+        <div class="briefing-stats" id="briefing-stats"></div>
+      </div>
+    </section>
+
+    <!-- 优惠活动专区 -->
+    <section class="section" id="promo-section" hidden>
+      <div class="section-head">
+        <h2 class="section-title"><span class="dot dot-promo"></span>优惠活动</h2>
+        <span class="section-hint" id="promo-hint"></span>
+      </div>
+      <div class="promo-rail" id="promo-rail"></div>
+    </section>
+
+    <!-- 今日要闻 -->
+    <section class="section" id="feed-section">
+      <div class="section-head">
+        <h2 class="section-title"><span class="dot dot-news"></span>今日要闻</h2>
+        <div class="filter-bar" id="filter-bar">
+          <div class="seg" id="category-seg" role="tablist" aria-label="按分组筛选"></div>
+          <label class="switch">
+            <input type="checkbox" id="hide-read">
+            <span>隐藏已读</span>
+          </label>
+        </div>
+      </div>
+      <div class="feed" id="feed"></div>
+      <div class="empty" id="feed-empty" hidden>
+        <div class="empty-art">🛰️</div>
+        <p class="empty-title">这里什么也没有</p>
+        <p class="empty-sub">换个关键词试试，或者点上面的分类看看别的。</p>
+      </div>
+      <div class="feed-more">
+        <button class="btn-ghost" id="btn-more" hidden>显示更多</button>
+      </div>
+    </section>
+
+    <!-- 论坛热议 -->
+    <section class="section" id="forum-section" hidden>
+      <div class="section-head">
+        <h2 class="section-title"><span class="dot dot-forum"></span>论坛热议</h2>
+        <span class="section-hint">按回复数排序</span>
+      </div>
+      <div class="forum-grid" id="forum-grid"></div>
+    </section>
+
+    <!-- 厂商动态 -->
+    <section class="section" id="vendor-section" hidden>
+      <div class="section-head">
+        <h2 class="section-title"><span class="dot dot-vendor"></span>厂商动态</h2>
+      </div>
+      <div class="vendor-tabs" id="vendor-tabs"></div>
+      <div class="feed feed-compact" id="vendor-feed"></div>
+    </section>
+
+    <!-- 更新日志时间线 -->
+    <section class="section" id="timeline-section" hidden>
+      <div class="section-head">
+        <h2 class="section-title"><span class="dot dot-log"></span>更新日志</h2>
+        <span class="section-hint">只显示最近新增</span>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+  </div>
+
+  <!-- ======================== 右：侧边栏 ======================== -->
+  <aside class="col-side" id="sidebar">
+
+    <div class="card side-card">
+      <div class="card-head">
+        <h3>数据源状态</h3>
+        <span class="card-hint" id="health-hint"></span>
+      </div>
+      <ul class="health-list" id="health-list"></ul>
+    </div>
+
+    <div class="card side-card">
+      <div class="card-head">
+        <h3>我的关注词</h3>
+      </div>
+      <div class="keyword-cloud" id="keyword-cloud"></div>
+    </div>
+
+    <div class="card side-card">
+      <div class="card-head">
+        <h3>历史归档</h3>
+      </div>
+      <div class="archive-list" id="archive-list"></div>
+    </div>
+
+    <div class="card side-card">
+      <div class="card-head">
+        <h3>工具</h3>
+      </div>
+      <div class="side-actions">
+        <button class="btn-soft" id="btn-export">导出 Markdown 日报</button>
+        <button class="btn-soft" id="btn-clear-read">清除已读记录</button>
+        <button class="btn-soft btn-danger" id="btn-reset">恢复默认设置</button>
+      </div>
+    </div>
+
+  </aside>
+</main>
+
+<!-- ============================ 页脚 ============================ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span>AI 日报 · 每日看板</span>
+      <span class="footer-sep">·</span>
+      <span id="footer-stat">—</span>
+    </div>
+    <div class="footer-right">
+      <span id="footer-time"></span>
+      <span class="footer-sep">·</span>
+      <span>Author: wr</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 快捷置顶 -->
+<button class="to-top" id="to-top" aria-label="回到顶部" hidden>↑</button>
+
+<!-- 说明弹层 -->
+<div class="modal" id="help-modal" hidden>
+  <div class="modal-mask" data-close></div>
+  <div class="modal-panel">
+    <div class="modal-head">
+      <h3>怎么用这个看板？</h3>
+      <button class="icon-btn" data-close aria-label="关闭">✕</button>
+    </div>
+    <div class="modal-body">
+      <p><strong>数据从哪来？</strong><br>
+      页面本身不带数据，数据由项目里的 Python 脚本抓取生成，放在同目录的 <code>data</code> 文件夹里。</p>
+
+      <p><strong>怎么更新？</strong><br>
+      两种方式任选：① 回到项目根目录，双击 <code>一键刷新.bat</code>；② 等 GitHub Actions 每天定时自动跑（需要你先按《使用说明.md》配置好）。</p>
+
+      <p><strong>推荐配置顺序</strong><br>
+      第一次用，建议先跑一次 <code>探测数据源.bat</code>，看看哪些源在你家网络下能抓通，抓不通的可以在 <code>配置/数据源清单.json</code> 里把「启用」改成 false，速度会快很多。</p>
+
+      <p><strong>快捷键</strong><br>
+      <code>/</code> 聚焦搜索框　<code>Esc</code> 清空搜索　<code>S</code> 只看收藏</p>
+
+      <p><strong>数据存在哪？</strong><br>
+      收藏、已读、主题这些只存在你自己的浏览器里，不会上传到任何地方。</p>
+    </div>
+  </div>
+</div>
+
+<!-- 骨架屏：数据注入前先占个位，避免页面闪一下空白 -->
+<div class="skeleton-wrap" id="skeleton">
+  <div class="sk sk-briefing"></div>
+  <div class="sk sk-card"></div>
+  <div class="sk sk-card"></div>
+  <div class="sk sk-card"></div>
+</div>
+
+<!--
+  数据文件：先加载「最新」，它里面带着当天的完整数据。
+  索引文件只存日期清单，用来切换历史归档。
+  两者都用 <script> 而不是 fetch，因为在本地 file:// 直接打开时，
+  浏览器不允许用 fetch 读取本地文件，但允许加载脚本。
+-->
+<script src="data/数据-最新.js" onerror="window.__DATA_MISSING__=true"></script>
+<script src="data/数据-索引.js" onerror="window.__INDEX_MISSING__=true"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+# AI 资讯每日看板 · 云端定时抓取
+# Author: wr
+#
+# 这个文件让 GitHub 免费帮你干活：
+# 每天北京时间 8:00 / 14:00 / 20:00 各自动抓一次，
+# 抓到的数据直接提交回仓库，你在本地打开网页就是新的。
+#
+# 注意：cron 用的是 UTC 时间（GitHub 服务器所在时区），
+#       0 点 UTC = 北京时间早上 8 点。
+#       程序内部已经锁死按北京时间算日期，不用担心对不齐。
+
+name: 每日抓取
+
+on:
+  # 定时：北京时间 8:00 / 14:00 / 20:00
+  schedule:
+    - cron: "0 0,6,12 * * *"
+  # 支持在网页上手动点一下就跑（仓库的 Actions 页签 → 每日抓取 → Run workflow）
+  workflow_dispatch:
+
+# 同一时间只允许一个任务在跑，防止重叠
+concurrency:
+  group: daily-fetch
+  cancel-in-progress: false
+
+# 允许机器人把抓到的数据提交回仓库
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      - name: 准备 Python 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 安装辅助库
+        # 就算这步失败也不要紧，程序会自动降级成标准库模式继续跑
+        run: pip install -r requirements.txt || echo "::warning::辅助库安装失败，将使用标准库模式"
+
+      - name: 抓取资讯并生成数据
+        env:
+          # 这个 Key 在仓库的 Settings → Secrets and variables → Actions 里配置
+          # 不配置也能跑，只是没有 AI 摘要（自动变成规则模式）
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          PYTHONUTF8: "1"
+        run: python src/main.py
+
+      - name: 把新数据提交回仓库
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "数据没有变化，不需要提交"
+          else
+            git commit -m "数据更新（北京时间 $(TZ=Asia/Shanghai date '+%F %H:%M')）"
+            git push
+          fi

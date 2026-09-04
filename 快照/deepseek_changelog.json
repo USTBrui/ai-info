@@ -1,0 +1,97 @@
+{
+ "source_id": "deepseek_changelog",
+ "updated_at": "2026-09-05T01:13:08.013165+08:00",
+ "count": 15,
+ "items": [
+  {
+   "key": "cf292c57acf9",
+   "title": "DeepSeek-V4-Flash-Vision-Exp åå¸ â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-v4-flash-vision-exp-åå¸",
+   "summary": "DeepSeek-V4-Flash-Vision-Exp åå¸ â"
+  },
+  {
+   "key": "b279c911c7b6",
+   "title": "DeepSeek-V4-Pro æ´æ° â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-v4-pro-æ´æ°",
+   "summary": "DeepSeek-V4-Pro æ´æ° â"
+  },
+  {
+   "key": "22beb3db8421",
+   "title": "DeepSeek-V4-Flash æ´æ° â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-v4-flash-æ´æ°",
+   "summary": "DeepSeek-V4-Flash æ´æ° â"
+  },
+  {
+   "key": "3fcf9b154921",
+   "title": "DeepSeek-V4 â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-v4",
+   "summary": "DeepSeek-V4 â"
+  },
+  {
+   "key": "b4011eaab798",
+   "title": "DeepSeek-V3.2 â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-v32",
+   "summary": "DeepSeek-V3.2 â"
+  },
+  {
+   "key": "9b2b86f0f30f",
+   "title": "DeepSeek-V3.2-Speciale â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-v32-speciale",
+   "summary": "DeepSeek-V3.2-Speciale â"
+  },
+  {
+   "key": "0c33642ada79",
+   "title": "DeepSeek-V3.2-Exp â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-v32-exp",
+   "summary": "DeepSeek-V3.2-Exp â"
+  },
+  {
+   "key": "7b9ce5d6a9b3",
+   "title": "DeepSeek-V3.1-Terminus â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-v31-terminus",
+   "summary": "DeepSeek-V3.1-Terminus â"
+  },
+  {
+   "key": "e492c0f98fe5",
+   "title": "DeepSeek-V3.1 â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-v31",
+   "summary": "DeepSeek-V3.1 â"
+  },
+  {
+   "key": "c22117ed9005",
+   "title": "deepseek-reasoner â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-reasoner",
+   "summary": "deepseek-reasoner â"
+  },
+  {
+   "key": "9f95a1069b8e",
+   "title": "deepseek-chat â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-chat",
+   "summary": "deepseek-chat â"
+  },
+  {
+   "key": "a2210d635e10",
+   "title": "deepseek-coder & deepseek-chat åçº§ä¸º DeepSeek V2.5 æ¨¡å â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-coder--deepseek-chat-åçº§ä¸º-deepseek-v25-æ¨¡å",
+   "summary": "deepseek-coder & deepseek-chat åçº§ä¸º DeepSeek V2.5 æ¨¡å â"
+  },
+  {
+   "key": "7a3679d12a08",
+   "title": "API ä¸çº¿ç¡¬çç¼å­ææ¯ â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#api-ä¸çº¿ç¡¬çç¼å­ææ¯",
+   "summary": "API ä¸çº¿ç¡¬çç¼å­ææ¯ â"
+  },
+  {
+   "key": "54d323d31506",
+   "title": "API æ¥å£æ´æ° â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#api-æ¥å£æ´æ°",
+   "summary": "API æ¥å£æ´æ° â"
+  },
+  {
+   "key": "c89bfbdeab2e",
+   "title": "deepseek-coder â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-coder",
+   "summary": "deepseek-coder â"
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+# AI 资讯每日看板 —— 可选增强依赖
+# Author: wr
+#
+# 说明：这两个包是「可选增强」，装不上也完全不影响使用。
+# 程序会尝试导入它们；导入失败时自动降级到 Python 标准库，功能一样能跑。
+# 想装就在这目录下执行：  pip install -r requirements.txt
+
+requests>=2.31.0
+beautifulsoup4>=4.12.0
