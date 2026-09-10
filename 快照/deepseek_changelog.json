@@ -1,8 +1,14 @@
 {
  "source_id": "deepseek_changelog",
- "updated_at": "2026-09-10T11:07:01.917761+08:00",
- "count": 15,
+ "updated_at": "2026-09-10T18:37:48.757596+08:00",
+ "count": 16,
  "items": [
+  {
+   "key": "0fcd90c2a170",
+   "title": "DeepSeek-V4.1-Flash åå¸ â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-v41-flash-åå¸",
+   "summary": "DeepSeek-V4.1-Flash åå¸ â"
+  },
   {
    "key": "cf292c57acf9",
    "title": "DeepSeek-V4-Flash-Vision-Exp åå¸ â",
