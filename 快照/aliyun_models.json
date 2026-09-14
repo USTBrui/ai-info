@@ -1,6 +1,6 @@
 {
  "source_id": "aliyun_models",
- "updated_at": "2026-09-13T23:37:33.910685+08:00",
+ "updated_at": "2026-09-14T11:24:50.482556+08:00",
  "count": 18,
  "items": [
   {
@@ -10,10 +10,10 @@
    "summary": "qwen3.8-max qwen3.7-plus qwen3.8-flash"
   },
   {
-   "key": "6e5187c384c9",
-   "title": "deepseek-v4-pro-0813 deepseek-v4-flash-0731 kimi/kimi-k3",
+   "key": "37e019686f0e",
+   "title": "deepseek-v4-pro-0813 deepseek-v4.1-flash kimi/kimi-k3",
    "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/deepseek-v4-pro-0813",
-   "summary": "deepseek-v4-pro-0813 deepseek-v4-flash-0731 kimi/kimi-k3"
+   "summary": "deepseek-v4-pro-0813 deepseek-v4.1-flash kimi/kimi-k3"
   },
   {
    "key": "d2e0423ff5c9",
