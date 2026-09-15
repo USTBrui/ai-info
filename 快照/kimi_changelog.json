@@ -1,19 +1,25 @@
 {
  "source_id": "kimi_changelog",
- "updated_at": "2026-09-15T11:25:58.236185+08:00",
- "count": 15,
+ "updated_at": "2026-09-15T19:05:28.838316+08:00",
+ "count": 17,
  "items": [
   {
-   "key": "4b056777ac91",
-   "title": "On this page",
-   "url": "https://platform.kimi.ai/docs/platform-changelog",
-   "summary": "On this page"
+   "key": "904ed94731ff",
+   "title": "​ September 14, 2026",
+   "url": "https://platform.kimi.ai/docs/platform-changelog#september-14-2026",
+   "summary": "​ September 14, 2026"
   },
   {
    "key": "906a1bc5fb64",
    "title": "​ August 31, 2026",
    "url": "https://platform.kimi.ai/docs/platform-changelog#august-31-2026",
    "summary": "​ August 31, 2026"
+  },
+  {
+   "key": "2bfa6244d7fb",
+   "title": "​ May 25, 2026",
+   "url": "https://platform.kimi.ai/docs/platform-changelog#may-25-2026",
+   "summary": "​ May 25, 2026"
   },
   {
    "key": "2044f7e96ac2",
@@ -92,6 +98,12 @@
    "title": "​ April 30, 2024",
    "url": "https://platform.kimi.ai/docs/platform-changelog#april-30-2024",
    "summary": "​ April 30, 2024"
+  },
+  {
+   "key": "4b056777ac91",
+   "title": "On this page",
+   "url": "https://platform.kimi.ai/docs/platform-changelog",
+   "summary": "On this page"
   }
  ]
 }
