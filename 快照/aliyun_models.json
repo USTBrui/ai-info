@@ -1,7 +1,7 @@
 {
  "source_id": "aliyun_models",
- "updated_at": "2026-09-18T11:13:50.020891+08:00",
- "count": 18,
+ "updated_at": "2026-09-18T18:35:12.183034+08:00",
+ "count": 19,
  "items": [
   {
    "key": "1af2e0f42ed2",
@@ -56,6 +56,12 @@
    "title": "wan3.0-video",
    "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/wan3.0-video",
    "summary": "wan3.0-video"
+  },
+  {
+   "key": "9c1b35242d08",
+   "title": "happyoyster-1.0-adventure happyoyster-1.0-directing happyoyster-1.0-acting 邀测",
+   "url": "https://bailian.console.aliyun.com/cn-beijing/?tab=model#/model-market/detail/happyoyster-1.0-adventure",
+   "summary": "happyoyster-1.0-adventure happyoyster-1.0-directing happyoyster-1.0-acting 邀测"
   },
   {
    "key": "7741b9e2da7f",
