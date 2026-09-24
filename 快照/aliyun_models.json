@@ -1,7 +1,7 @@
 {
  "source_id": "aliyun_models",
- "updated_at": "2026-09-24T11:11:06.263250+08:00",
- "count": 19,
+ "updated_at": "2026-09-24T19:07:25.935325+08:00",
+ "count": 20,
  "items": [
   {
    "key": "1af2e0f42ed2",
@@ -116,6 +116,12 @@
    "title": "qwen3.7-text-rerank",
    "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/qwen3.7-text-rerank",
    "summary": "qwen3.7-text-rerank"
+  },
+  {
+   "key": "12e72fcdb73c",
+   "title": "decision-model-preview",
+   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/decision-model-preview",
+   "summary": "decision-model-preview"
   }
  ]
 }
