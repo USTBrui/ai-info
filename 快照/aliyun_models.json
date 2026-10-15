@@ -1,7 +1,7 @@
 {
  "source_id": "aliyun_models",
- "updated_at": "2026-10-15T11:13:58.995888+08:00",
- "count": 20,
+ "updated_at": "2026-10-15T18:52:20.080045+08:00",
+ "count": 19,
  "items": [
   {
    "key": "1af2e0f42ed2",
@@ -74,12 +74,6 @@
    "title": "qwen-audio-3.0-tts-plus MiniMax/speech-2.8-hd",
    "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/qwen-audio-3.0-tts-plus",
    "summary": "qwen-audio-3.0-tts-plus MiniMax/speech-2.8-hd"
-  },
-  {
-   "key": "b3530000dc1a",
-   "title": "fun-music-v1",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/fun-music-v1",
-   "summary": "fun-music-v1"
   },
   {
    "key": "d9251506fa12",
