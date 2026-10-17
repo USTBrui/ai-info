@@ -1,8 +1,20 @@
 {
  "source_id": "deepseek_changelog",
- "updated_at": "2026-10-17T11:00:59.704429+08:00",
- "count": 16,
+ "updated_at": "2026-10-17T18:08:58.833278+08:00",
+ "count": 18,
  "items": [
+  {
+   "key": "f3f51ae70540",
+   "title": "å¼æ¾èªç æç´¢ API â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#å¼æ¾èªç æç´¢-api",
+   "summary": "å¼æ¾èªç æç´¢ API â"
+  },
+  {
+   "key": "ba744a5af04c",
+   "title": "DeepSeek-V4.1-Flash-1017 æ´æ° â",
+   "url": "https://api-docs.deepseek.com/zh-cn/updates#deepseek-v41-flash-1017-æ´æ°",
+   "summary": "DeepSeek-V4.1-Flash-1017 æ´æ° â"
+  },
   {
    "key": "0fcd90c2a170",
    "title": "DeepSeek-V4.1-Flash åå¸ â",
