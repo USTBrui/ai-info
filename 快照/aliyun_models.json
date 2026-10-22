@@ -1,6 +1,6 @@
 {
  "source_id": "aliyun_models",
- "updated_at": "2026-10-22T00:37:26.294810+08:00",
+ "updated_at": "2026-10-22T11:19:27.125361+08:00",
  "count": 19,
  "items": [
   {
@@ -22,10 +22,10 @@
    "summary": "kimi-k3 glm-5.2 ZHIPU/GLM-5.3"
   },
   {
-   "key": "13f5276f993f",
-   "title": "MiniMax-M3 mimo-v2.5-pro",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/MiniMax%2FMiniMax-M3",
-   "summary": "MiniMax-M3 mimo-v2.5-pro"
+   "key": "f0eefcb3dff2",
+   "title": "MiniMax-M3.1-Flash mimo-v2.5-pro",
+   "url": "https://help.aliyun.com/zh/model-studio/minimax-m3-1-flash",
+   "summary": "MiniMax-M3.1-Flash mimo-v2.5-pro"
   },
   {
    "key": "b04c7214e52d",
