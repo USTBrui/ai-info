@@ -1,121 +1,25 @@
 {
  "source_id": "aliyun_models",
- "updated_at": "2026-10-26T20:16:10.011829+08:00",
- "count": 19,
+ "updated_at": "2026-10-27T11:44:27.104301+08:00",
+ "count": 3,
  "items": [
   {
-   "key": "1af2e0f42ed2",
-   "title": "qwen3.8-max qwen3.7-plus qwen3.8-flash",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/qwen3.8-max",
-   "summary": "qwen3.8-max qwen3.7-plus qwen3.8-flash"
+   "key": "0d5229c23fcd",
+   "title": "3D 模型生成",
+   "url": "https://help.aliyun.com/zh/model-studio/models",
+   "summary": "3D 模型生成"
   },
   {
-   "key": "37e019686f0e",
-   "title": "deepseek-v4-pro-0813 deepseek-v4.1-flash kimi/kimi-k3",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/deepseek-v4-pro-0813",
-   "summary": "deepseek-v4-pro-0813 deepseek-v4.1-flash kimi/kimi-k3"
+   "key": "a7829507ecab",
+   "title": "向量与重排序",
+   "url": "https://help.aliyun.com/zh/model-studio/models",
+   "summary": "向量与重排序"
   },
   {
-   "key": "d2e0423ff5c9",
-   "title": "kimi-k3 glm-5.2 ZHIPU/GLM-5.3",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/kimi-k3",
-   "summary": "kimi-k3 glm-5.2 ZHIPU/GLM-5.3"
-  },
-  {
-   "key": "f0eefcb3dff2",
-   "title": "MiniMax-M3.1-Flash mimo-v2.5-pro",
-   "url": "https://help.aliyun.com/zh/model-studio/minimax-m3-1-flash",
-   "summary": "MiniMax-M3.1-Flash mimo-v2.5-pro"
-  },
-  {
-   "key": "b04c7214e52d",
-   "title": "qwen3.8-max qwen3.7-plus qwen3.8-omni-flash",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/qwen3.8-max",
-   "summary": "qwen3.8-max qwen3.7-plus qwen3.8-omni-flash"
-  },
-  {
-   "key": "a559e9544d5a",
-   "title": "kimi/kimi-k3",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/kimi%2Fkimi-k3",
-   "summary": "kimi/kimi-k3"
-  },
-  {
-   "key": "357523209038",
-   "title": "qwen-image-3.0-pro wan2.7-image-pro happyhorse-1.1-t2v",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/qwen-image-3.0-pro",
-   "summary": "qwen-image-3.0-pro wan2.7-image-pro happyhorse-1.1-t2v"
-  },
-  {
-   "key": "6ecc2ff46b24",
-   "title": "happyhorse-1.1-i2v happyhorse-1.1-r2v happyhorse-1.0-video-edit",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/happyhorse-1.1-i2v",
-   "summary": "happyhorse-1.1-i2v happyhorse-1.1-r2v happyhorse-1.0-video-edit"
-  },
-  {
-   "key": "77354e5e3dd0",
-   "title": "wan3.0-video",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/wan3.0-video",
-   "summary": "wan3.0-video"
-  },
-  {
-   "key": "9c1b35242d08",
-   "title": "happyoyster-1.0-adventure happyoyster-1.0-directing happyoyster-1.0-acting 邀测",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/?tab=model#/model-market/detail/happyoyster-1.0-adventure",
-   "summary": "happyoyster-1.0-adventure happyoyster-1.0-directing happyoyster-1.0-acting 邀测"
-  },
-  {
-   "key": "7741b9e2da7f",
-   "title": "Tripo/Tripo-H3.1 Tripo/Tripo-P1.0",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/Tripo%2FTripo-H3.1",
-   "summary": "Tripo/Tripo-H3.1 Tripo/Tripo-P1.0"
-  },
-  {
-   "key": "73d2ff1dc065",
-   "title": "qwen-audio-3.0-tts-plus MiniMax/speech-2.8-hd",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/qwen-audio-3.0-tts-plus",
-   "summary": "qwen-audio-3.0-tts-plus MiniMax/speech-2.8-hd"
-  },
-  {
-   "key": "d9251506fa12",
-   "title": "qwen-audio-3.1-asr-flash-streaming qwen-audio-3.1-asr-flash-filetrans qwen3.8-omni-flash-realtime",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/qwen-audio-3.1-asr-flash-streaming",
-   "summary": "qwen-audio-3.1-asr-flash-streaming qwen-audio-3.1-asr-flash-filetrans qwen3.8-omni-flash-realtime"
-  },
-  {
-   "key": "ebf76163f2d1",
-   "title": "qwen3.8-omni-flash",
-   "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-omni-flash",
-   "summary": "qwen3.8-omni-flash"
-  },
-  {
-   "key": "3cdd179387e4",
-   "title": "qwen-audio-3.1-realtime-plus qwen3.5-omni-plus qwen3.8-omni-flash-realtime",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/qwen-audio-3.1-realtime-plus",
-   "summary": "qwen-audio-3.1-realtime-plus qwen3.5-omni-plus qwen3.8-omni-flash-realtime"
-  },
-  {
-   "key": "f2e173790031",
-   "title": "qwen3.8-omni-flash-realtime qwen3.8-omni-flash",
-   "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-omni-flash-realtime",
-   "summary": "qwen3.8-omni-flash-realtime qwen3.8-omni-flash"
-  },
-  {
-   "key": "ff759eb37918",
-   "title": "qwen3.7-text-embedding-flash qwen3.7-text-embedding qwen3-vl-embedding",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/qwen3.7-text-embedding-flash",
-   "summary": "qwen3.7-text-embedding-flash qwen3.7-text-embedding qwen3-vl-embedding"
-  },
-  {
-   "key": "7b19190917bb",
-   "title": "qwen3.7-text-rerank",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/qwen3.7-text-rerank",
-   "summary": "qwen3.7-text-rerank"
-  },
-  {
-   "key": "12e72fcdb73c",
-   "title": "decision-model-preview",
-   "url": "https://bailian.console.aliyun.com/cn-beijing/model/market/detail/decision-model-preview",
-   "summary": "decision-model-preview"
+   "key": "0cdf56af8bb5",
+   "title": "查看所有模型",
+   "url": "https://help.aliyun.com/zh/model-studio/models",
+   "summary": "查看所有模型"
   }
  ]
 }
