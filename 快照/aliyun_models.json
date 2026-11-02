@@ -1,20 +1,8 @@
 {
  "source_id": "aliyun_models",
- "updated_at": "2026-11-02T12:28:36.416252+08:00",
- "count": 3,
+ "updated_at": "2026-11-02T22:46:56.574364+08:00",
+ "count": 1,
  "items": [
-  {
-   "key": "0d5229c23fcd",
-   "title": "3D 模型生成",
-   "url": "https://help.aliyun.com/zh/model-studio/models",
-   "summary": "3D 模型生成"
-  },
-  {
-   "key": "a7829507ecab",
-   "title": "向量与重排序",
-   "url": "https://help.aliyun.com/zh/model-studio/models",
-   "summary": "向量与重排序"
-  },
   {
    "key": "0cdf56af8bb5",
    "title": "查看所有模型",
